@@ -1,0 +1,22 @@
+// L.65 : in this file we will define the base styles that we will use on all the project not for only component like font-family
+// here we define the major scopes like html  mean the hole file body mean the hole body of the page and so on.
+
+// we using it to make the rem of multiply with 10 to make the font-size so 1 rem = 10 pixel and so on
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $dark-blue;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: $m-size;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}

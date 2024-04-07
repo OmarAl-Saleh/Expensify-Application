@@ -1,0 +1,25 @@
+// L 67 : we will use it define a theme for our app so wil define variables that we will use in our app
+
+//** Colors
+
+// when we define a variable we must use the $ sign before the name of the variable
+$off-black: #20222b;
+$dark-blue: #333745;
+$blue: #3c4251;
+$light-blue: #464b5e;
+$off-white: #a5a5a5;
+$purple: #8357c5;
+//**  Spacing
+
+//small size
+$s-size: 1.2rem;
+//medium size :
+$m-size: 1.6rem;
+//large size :
+$L_size: 3.2rem;
+//x-large size :
+$xl-size: 4.8rem;
+
+//L.72
+
+$desktop-breakpoint: 45rem;

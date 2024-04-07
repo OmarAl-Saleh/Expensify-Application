@@ -1,0 +1,41 @@
+// Add Option Error
+
+.add-option-error {
+  color: $off-white;
+  font-style: italic;
+  padding: 0 $m-size;
+  margin: $m-size 0 0 0;
+}
+
+// Add Option
+
+.add-option {
+  display: flex;
+  padding: $m-size;
+  flex-direction: column;
+}
+
+.add-option__input {
+  flex-grow: 1; // to take the full width of the parent so the input grow to take all the spaces
+  background: $dark-blue;
+  color: $off-white;
+  border: none;
+  border-bottom: 0.3rem solid darken($dark-blue, 10%);
+  margin: 0 0 $m-size 0;
+  padding: $s-size;
+}
+
+//L.72
+// we will customize some features for phones front end so we will use media queries and we make meta scope on index file to make the app width suitable with each phone
+
+@media (min-width: $desktop-breakpoint) {
+  * {
+    .add-option {
+      flex-direction: row;
+    }
+
+    .add-option__input {
+      margin: 0 $s-size 0 0;
+    }
+  }
+}

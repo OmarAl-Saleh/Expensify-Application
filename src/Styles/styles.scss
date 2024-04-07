@@ -1,0 +1,18 @@
+//*the order of the imports is important
+//L.67 : we must import the setting file before the others so they can use the variables we defined in it
+
+@import "./base/setting";
+//L.65
+// we will use this file to define our global styles and variables and import them in our components so the app.js  can use them it's an easy way to manage the styles and variables in a large project
+
+// any file we wil import in this file they must begin with an underscore and end with .scss extension
+
+// when we import a file we don't need to write the extension and the underscore just his name
+@import "./components/button";
+@import "./base/base";
+@import "./components/add-option";
+@import "./components//container";
+@import "./components/header";
+@import "./components/modal";
+@import "./components/option";
+@import "./components/widget";

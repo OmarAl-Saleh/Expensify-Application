@@ -1,0 +1,7 @@
+//L.67 : we use it to center the content of the page
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto; /* this line is used to center our content */
+  padding: 0 $m-size;
+}

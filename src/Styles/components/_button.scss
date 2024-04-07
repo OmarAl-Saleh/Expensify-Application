@@ -1,0 +1,46 @@
+//L.68
+.big-button {
+  // we will use it in What should i do button
+  background-color: $purple;
+  border: none;
+  border-bottom: 0.6rem solid darken($purple, 10%); // if want to know more function on bookmarks : sass reference functions
+  color: white;
+  font-weight: bold;
+  font-size: $L_size;
+  width: 100%;
+  margin-bottom: $m-size;
+  padding: 2.4rem;
+}
+
+.big-button:disabled {
+  // we will use it when the button is disabled
+  opacity: 0.5;
+}
+
+// we will use it for the other small buttons
+.button {
+  background-color: $purple;
+  border: none;
+  border-bottom: 0.3rem solid darken($purple, 10%);
+  color: white;
+  font-weight: 500;
+  padding: $s-size;
+}
+//bem : block element modifier here we make the modifier : so its like I inherit the button class and I add the --link modifier to override and update some styles
+// you can see how we use it in Options component the naming are not important you can name what ever you want but it's recommended
+// we use it like this className="button button--link" to get a link styled button
+.button--link {
+  background: none;
+  border: none;
+  color: $purple;
+  font-weight: 500;
+  padding: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .big-button {
+    margin-bottom: $xl-size;
+  }
+}
