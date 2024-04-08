@@ -1,5 +1,5 @@
 {
-  "name": "indecision-app",
+  "name": "expensify",
   "version": "1.0.0",
   "main": "index.js",
   "author": "omar alsaleh",
@@ -24,6 +24,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-modal": "^3.16.1",
+    "react-router-dom": "4.2.2",
     "sass-loader": "6.0.6",
     "style-loader": "^0.18.2",
     "validator": "^8.0.0",
