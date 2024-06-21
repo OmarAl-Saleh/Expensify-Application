@@ -10,7 +10,6 @@ import getVisibleExpenses from "./selectors/expenses";
 
 //L.101 to provide the store to all our components
 import { Provider } from "react-redux";
-
 //L.99 we organize the redux and connected it with our components
 
 const store = configureStore();
@@ -19,7 +18,6 @@ store.dispatch(addExpense({ description: "gas bill", amount: 2000 }));
 store.dispatch(
   addExpense({ description: "Rent", amount: 10800, createdAt: 1000 })
 );
-
 
 const state = store.getState();
 

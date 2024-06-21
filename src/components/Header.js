@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-
 const Header = () => (
   //L.79 : we can use the header component in all the routes
   <header>
