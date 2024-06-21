@@ -6,12 +6,11 @@
   "license": "MIT",
   "scripts": {
     "serve": "live-server public/ --port=3000",
-    "build:dev": "webpack --mode development",
-    "build:prod": "webpack --mode production",
-    "dev-server": "webpack serve --mode development",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
+    "dev-server": "webpack-dev-server",
     "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
-    "start": "node server/server.js",
-    "vercel-build": "npm run build:prod"
+    "start": "node server/server.js"
   },
   "dependencies": {
     "babel-cli": "^6.24.1",
