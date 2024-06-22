@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
 import { removeExpense } from "../actions/expenses";
+import moment from "moment";
+import numeral from "numeral";
 //L.102
 const ExpenseListItem = ({
   history,
@@ -18,7 +20,8 @@ const ExpenseListItem = ({
       </Link>
 
       <p>
-        {amount} - {createdAt}
+        {numeral(amount / 100).format("$0,0.00")} -{" "}
+        {moment(createdAt).format("MMMM Do, YYYY")}
       </p>
       {/* <button
         onClick={() => {

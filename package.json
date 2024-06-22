@@ -10,7 +10,8 @@
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
     "build-babel": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
-    "start": "node server/server.js"
+    "start": "node api/server.js",
+    "build": "webpack -p --env production"
   },
   "dependencies": {
     "babel-cli": "^6.24.1",
@@ -27,6 +28,7 @@
     "moment": "2.18.1",
     "node-sass": "^9.0.0",
     "normalize.css": "7.0.0",
+    "numeral": "2.0.6",
     "react": "^16.0.0",
     "react-addons-shallow-compare": "15.6.0",
     "react-dates": "12.7.0",
@@ -41,5 +43,7 @@
     "webpack": "^3.1.0",
     "webpack-dev-server": "^2.5.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    
+  }
 }
