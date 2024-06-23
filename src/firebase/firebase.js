@@ -30,9 +30,7 @@ const database = firebase.database();
 
 export { firebase, database as default };
 
-//L.146 --> 150 notes about CRUD operation on firebase
-
-/*
+console.log("production");
 
 database
   .ref()
@@ -51,6 +49,11 @@ database
   .catch(() => {
     console.log("This failed");
   });
+
+//L.146 --> 150 notes about CRUD operation on firebase
+
+/*
+
 
 
 / child_removed
