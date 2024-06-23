@@ -1,8 +1,12 @@
 // Store creation
 
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import expensesReducer from "../reducers/expenses";
 import filtersReducer from "../reducers/filters";
+//L.152
+import thunk from "redux-thunk";
+
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export default () => {
   const store = createStore(
@@ -10,7 +14,7 @@ export default () => {
       expenses: expensesReducer,
       filters: filtersReducer,
     }),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    composeEnhancer(applyMiddleware(thunk))
   );
   return store;
 };
@@ -19,3 +23,5 @@ export default () => {
 //* this is one line for all your redux application :  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 //* you get it from this link :
 // https://github.com/zalmoxisus/redux-devtools-extension
+
+
