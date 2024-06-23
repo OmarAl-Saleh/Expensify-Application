@@ -40,6 +40,6 @@ const jsx = (
 //L.80: organize the routers in separate files
 ReactDOM.render(<p>Loading...</p>, document.getElementById("app"));
 //L.158 : to fetch all the expenses from the database and pass them to the redux when we first request the program
-store.dispatch(startSetExpenses()).then(() => {
-  ReactDOM.render(jsx, document.getElementById("app"));
+// store.dispatch(startSetExpenses()).then(() => {
+//   ReactDOM.render(jsx, document.getElementById("app"));
 });
