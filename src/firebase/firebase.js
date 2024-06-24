@@ -12,7 +12,7 @@ const Config = {
   appId: process.env.FIREBASE_APP_ID,
   measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 };
-
+console.log(process.env.FIREBASE_API_KEY);
 // const Config = {
 //   apiKey: "AIzaSyANzphsaopopOWtcvwGkMkFmAa0Ex2Mjt4",
 //   authDomain: "expensify-e9551.firebaseapp.com",
@@ -32,6 +32,10 @@ export { firebase, database as default };
 
 console.log("production");
 
+//L.146 --> 150 notes about CRUD operation on firebase
+
+/*
+
 database
   .ref()
   .set({
@@ -49,12 +53,6 @@ database
   .catch(() => {
     console.log("This failed");
   });
-
-//L.146 --> 150 notes about CRUD operation on firebase
-
-/*
-
-
 
 / child_removed
 database.ref('expenses').on('child_removed', (snapshot) => {
