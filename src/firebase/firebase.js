@@ -5,18 +5,18 @@ import * as firebase from "firebase";
 const Config = {
   apiKey: process.env.FIREBASE_API_KEY,
   authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  databaseURL: "https://expensify-production-82320-default-rtdb.firebaseio.com",
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
   projectId: process.env.FIREBASE_PROJECT_ID,
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
   appId: process.env.FIREBASE_APP_ID,
   measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 };
-console.log(process.env.FIREBASE_API_KEY);
+
 // const Config = {
 //   apiKey: "AIzaSyANzphsaopopOWtcvwGkMkFmAa0Ex2Mjt4",
 //   authDomain: "expensify-e9551.firebaseapp.com",
-//   databaseURL: "https://expensify-e9551-default-rtdb.firebaseio.com", development database
+//   databaseURL: "https://expensify-e9551-default-rtdb.firebaseio.com", development local database
 //   projectId: "expensify-e9551",
 //   storageBucket: "expensify-e9551.appspot.com",
 //   messagingSenderId: "651787381489",
@@ -28,7 +28,11 @@ firebase.initializeApp(Config);
 
 const database = firebase.database();
 
-export { firebase, database as default };
+//L162 : Authentication with google , go to firebase docs
+
+const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+export { firebase, googleAuthProvider, database as default };
 
 console.log("production");
 
