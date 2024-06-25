@@ -5,13 +5,19 @@ import { startAddExpense } from "../actions/expenses";
 //L.107
 const AddExpensePage = (props) => (
   <div>
-    <h1>Add Expense</h1>
-    <ExpenseForm
-      onSubmit={(expense) => {
-        props.dispatch(startAddExpense(expense));
-        props.history.push("/"); // it like a redirect to home page after you submit the value
-      }}
-    />
+    <div className="page-header">
+      <div className="content-container">
+        <h1 className="page-header__title">Add Expense</h1>
+      </div>
+    </div>
+    <div className="content-container">
+      <ExpenseForm
+        onSubmit={(expense) => {
+          props.dispatch(startAddExpense(expense));
+          props.history.push("/"); // it like a redirect to home page after you submit the value
+        }}
+      />
+    </div>
   </div>
 );
 export default connect()(AddExpensePage);

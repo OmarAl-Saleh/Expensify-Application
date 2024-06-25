@@ -8,6 +8,7 @@ import { startSetExpenses } from "./actions/expenses";
 import { login, logout } from "./actions/auth";
 import "react-dates/lib/css/_datepicker.css";
 import { firebase } from "./firebase/firebase";
+import LoadingPage from "./components/LoadingPage";
 
 //L.101 to provide the store to all our components
 import { Provider } from "react-redux";
@@ -32,7 +33,7 @@ const jsx = (
 
 // we use the ReactDOM.render method to render the parent class in the HTML file
 //L.80: organize the routers in separate files
-ReactDOM.render(<p>Loading...</p>, document.getElementById("app"));
+ReactDOM.render(<LoadingPage />, document.getElementById("app"));
 //L.158 : to fetch all the expenses from the database and pass them to the redux when we first request the program
 
 //L.164,165 the function is run when we change from authenticated to not authenticated and vice versa
