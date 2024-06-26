@@ -1,6 +1,6 @@
-# Expinsify Application
+# Expensify Application
 
-Expinsify is a comprehensive expense management application developed using React and Node.js, with Firebase for backend services. The project is built using Babel and Webpack, ensuring modern JavaScript development standards. The application allows users to manage their expenses effectively by adding, editing, and removing expense entries. The dashboard provides powerful filtering and search functionalities to help users stay on top of their finances.
+Expensify is a comprehensive expense management application developed using React and Node.js, with Firebase for backend services. The project is built using Babel and Webpack, ensuring modern JavaScript development standards. The application allows users to manage their expenses effectively by adding, editing, and removing expense entries. The dashboard provides powerful filtering and search functionalities to help users stay on top of their finances.
 
 ## Features
 
